@@ -11,8 +11,8 @@
 - Low - $3,100
 - Community Judging Pool - $5,340
 
-- Starts: May 10, 2024 16:00 UTC
-- Ends: May 31, 2024 16:00 UTC
+- Starts: May 10, 2024 Noon UTC
+- Ends: May 31, 2024 Noon UTC
 
 ### Stats
 
