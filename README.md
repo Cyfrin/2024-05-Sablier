@@ -27,10 +27,24 @@ The sender of a payment stream first deposits a specific amount of ERC-20 tokens
 
 There are two repositories:
 
-1. **v2-core**
-2. **v2-periphery**
+### **v2-core**
 
-Periphery contracts interact with core contracts. It allows creation of multiple streams in a single transaction. It also facilitates vesting airdrop distribution.
+Core contracts facilitate the creation of three types of streams:
+
+1. **Lockup Linear**: This stream linearly unlocks assets over time.
+
+2. **Lockup Tranched**: Assets in this stream are unlocked in scheduled tranches such as monthly. This stream will be launching in v2.2.
+
+3. **Lockup Dynamic**: Our most versatile stream, allowing users to create various unlocking curves including exponential, unlock cliff, and timelock.
+
+For additional details on how these streams work, please refer to our [documentation](https://docs.sablier.com/concepts/protocol/streaming). Note that the documentation is for v2.1, while the contracts in this contest apply to v2.2.
+
+### **v2-periphery**
+
+Periphery contracts interact with core contracts and consist of two primary contracts:
+
+1. **Batch contract** enabled the creation of multiple streams within a single transaction.
+2. **Merkle Lockup contracts** support the distribution of vesting airdrops. A Merkle lockup contract is created using a factory contract and contains a Merkle tree root with details on airdrop recipients and amounts. Once deployed, recipients can claim their airdrops via the Merkle lockup contract. These are then distributed as Sablier streams, called as [Airstreams](https://docs.sablier.com/concepts/protocol/airstreams). Moreover, there is a grace period during which the airdrop creator can clawback unclaimed funds.
 
 ### Useful links:
 
@@ -125,7 +139,13 @@ cd 2024-05-Sablier
 code .
 ```
 
-Inside the project directory, run the following commands to install Node.js dependencies and build the contracts:
+Then either go to `v2-core` or `v2-periphery`.
+
+```bash
+$ cd v2-core
+```
+
+Once you are inside the project directory, run the following commands to install Node.js dependencies and build the contracts:
 
 ```bash
 $ bun install --frozen-lockfile
