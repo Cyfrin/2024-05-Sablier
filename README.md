@@ -216,3 +216,5 @@ The protocol makes the following assumptions:
 3. In `SablierV2MerkleLockupFactory`, `aggregateAmount` and `recipientCount` values are exclusively emitted in the `CreateMerkleLT` and `CreateMerkleLL` events. These values are not validated within the create functions as they are not utilized elsewhere in the contract. However, it's important to note that this impacts integrators who listen to these events and rely on these values. We advise caution, as they may be inaccurate.
 
 4. If the `admin` of the deployed `SablierV2MerkleLT` and `SablierV2MerkleLL` contracts is modified, the `onLockupStreamWithdrawn()` hook callback, if it is implemented, will continue to be made to the original `admin` for the airstreams that were already claimed at the time of the change.
+
+**[Additional known issues as detected by LightChaser](https://github.com/Cyfrin/2024-05-Sablier/issues/1)**
