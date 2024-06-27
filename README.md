@@ -1,10 +1,8 @@
-<p align="center">
-<img src="https://files.sablier.com/logo.svg" width="500" alt="project-name">
-</p>
+# Sablier
 
-# Contest Details
+[//]: # (contest-details-open)
 
-### Prize Pool
+## Contest Details
 
 - Total Pool - $53,440
 - H/M - $45,000
@@ -76,6 +74,10 @@ Users who create streams and are responsible for funding them. Senders are also 
 
 These are callers who are neither Sender nor Recipient but are allowed to trigger withdrawals on behalf of the recipients. This is because the withdraw function is publicly callable. Note that an unknown caller can withdraw assets only to the recipient's address.
 
+[//]: # (contest-details-close)
+
+[//]: # (scope-open)
+
 ## Scope (contracts)
 
 ### v2-core
@@ -129,7 +131,11 @@ Its not compatible with:
 3. Rebased ERC20 tokens can be used but yield will be lost
 4. Ether (ETH)
 
-## Setup
+[//]: # (scope-close)
+
+[//]: # (getting-started-open)
+
+## Getting Started
 
 Clone the contest repository:
 
@@ -201,6 +207,10 @@ The protocol makes the following assumptions:
 
 4. In `SablierV2MerkleLT`, the unlock percentages and durations for tranches are uniform across all airdrop claimers.
 
+[//]: # (getting-started-close)
+
+[//]: # (known-issues-open)
+
 ## Known Issues
 
 ### v2-core
@@ -218,3 +228,5 @@ The protocol makes the following assumptions:
 4. If the `admin` of the deployed `SablierV2MerkleLT` and `SablierV2MerkleLL` contracts is modified, the `onLockupStreamWithdrawn()` hook callback, if it is implemented, will continue to be made to the original `admin` for the airstreams that were already claimed at the time of the change.
 
 **[Additional known issues as detected by LightChaser](https://github.com/Cyfrin/2024-05-Sablier/issues/1)**
+
+[//]: # (known-issues-close)
