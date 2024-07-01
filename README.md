@@ -1,7 +1,5 @@
 # Sablier
 
-[//]: # (contest-details-open)
-
 ## Contest Details
 
 - Total Pool - $53,440
@@ -16,6 +14,8 @@
 
 - Total nSLOC: 2655
 - $/nSloc: $20
+
+[//]: # (contest-details-open)
 
 ## About
 
